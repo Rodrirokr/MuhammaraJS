@@ -37,6 +37,8 @@ jobs:
         env:
           npm_config_arch: ${{ matrix.architecture }}
           npm_config_target_arch: ${{ matrix.architecture }}
+          CFLAGS: -arch arm64
+          CPPFLAGS: -arch arm64
       - run: ./node_modules/.bin/node-pre-gyp package testpackage
       - uses: actions/upload-artifact@v2
         with:
