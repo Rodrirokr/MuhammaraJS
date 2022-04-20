@@ -39,7 +39,7 @@ jobs:
           npm_config_target_arch: arm64
           CFLAGS: -arch arm64
           CPPFLAGS: -arch arm64
-      - run: ./node_modules/.bin/node-pre-gyp package testpackage
+      - run: ./node_modules/.bin/node-pre-gyp package
       - uses: actions/upload-artifact@v2
         with:
           path: build/stage/julianhille/MuhammaraJS/releases/download/**/*.gz
