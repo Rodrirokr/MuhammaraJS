@@ -36,7 +36,7 @@ jobs:
       - run: npm install --build-from-source
         env:
           npm_config_arch: ${{ matrix.architecture }}
-          npm_config_target_arch: ${{ matrix.architecture }}
+          npm_config_target_arch: arm64
           CFLAGS: -arch arm64
           CPPFLAGS: -arch arm64
       - run: ./node_modules/.bin/node-pre-gyp package testpackage
